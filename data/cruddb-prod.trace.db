@@ -1,0 +1,6 @@
+2025-04-11 09:57:37.033598+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+UPDATE users SET status = 'ACTIVE' WHERE status IS NULL [42104-224]
+2025-04-11 09:57:38.160486+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ROLES" not found (this database is empty); SQL statement:
+select count(*) from roles r1_0 [42104-224]

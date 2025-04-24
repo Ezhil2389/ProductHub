@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  backend:
+    build: .
+    container_name: crud-backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    networks:
+      - crud-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: crud-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://backend:8080/api
+    depends_on:
+      - backend
+    networks:
+      - crud-net
+
+networks:
+  crud-net:
+    driver: bridge 
