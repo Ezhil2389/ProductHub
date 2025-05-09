@@ -1,6 +1,6 @@
 import React, { useState, useRef, KeyboardEvent, ClipboardEvent, useEffect } from 'react';
 import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Package, Users as UsersIcon, UserCircle, Menu, X, Code2, ArrowUpRight, ArrowDownRight, Bell, Search, LogOut, Moon, Sun, PlusCircle, RefreshCw, Filter, TrendingUp, LineChart, Zap, BarChart3, PieChart, DollarSign, Calendar, Sparkles, ShoppingCart, Tag, Clock, User as UserIcon, Mail, Shield, ShieldCheck, Activity, LogIn, Key, UserCog, History, PencilIcon, AlertCircle, CheckCircle, Save, Lock, Circle, XCircle, Unlock, ShieldOff, QrCode, CheckSquare, Upload, Download, AlertTriangle, Bug, Info, MessageSquare, Settings } from 'lucide-react';
+import { LayoutDashboard, Package, Users as UsersIcon, UserCircle, Menu, X, Code2, ArrowUpRight, ArrowDownRight, Bell, Search, LogOut, Moon, Sun, PlusCircle, RefreshCw, Filter, TrendingUp, LineChart, Zap, BarChart3, PieChart, DollarSign, Calendar, Sparkles, ShoppingCart, Tag, Clock, User as UserIcon, Mail, Shield, ShieldCheck, Activity, LogIn, Key, UserCog, History, PencilIcon, AlertCircle, CheckCircle, Save, Lock, Circle, XCircle, Unlock, ShieldOff, QrCode, CheckSquare, Upload, Download, AlertTriangle, Bug, Info, MessageSquare, Settings, Database } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useAuth } from '../contexts/AuthContext';
 import ProductRoutes from './ProductRoutes';
@@ -14,6 +14,8 @@ import Logs from './Logs';
 import ChatList from './ChatList';
 import MenuSettings from './MenuSettings';
 import ThemeToggle from './ThemeToggle';
+import ConnectionPool from '../pages/ConnectionPool';
+import CacheManagement from '../pages/CacheManagement';
 
 // Define interface for navigation items
 interface NavItem {
@@ -2523,7 +2525,9 @@ const Dashboard = () => {
                 { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard, badge: ''},
                 { name: 'Products', path: '/dashboard/products', icon: Package, badge: productCount > 0 ? productCount.toString() : '' },
                 ...(isAdmin ? [
-                  { name: 'Team Members', path: '/dashboard/team', icon: UsersIcon, badge: userCount > 0 ? userCount.toString() : '' }
+                  { name: 'Team Members', path: '/dashboard/team', icon: UsersIcon, badge: userCount > 0 ? userCount.toString() : '' },
+                  { name: 'Connection Pool', path: '/dashboard/cpool', icon: Database, badge: '' },
+                  { name: 'Cache Management', path: '/dashboard/cache-management', icon: Zap, badge: '' }
                 ] : []),
                 { name: 'Chat', path: '/dashboard/chat', icon: MessageSquare, badge: '' },
                 { name: 'Profile', path: '/dashboard/profile', icon: UserCircle, badge: '' },
@@ -2645,6 +2649,8 @@ const Dashboard = () => {
                   <Route path="/team/add-user" element={<AddUser />} />
                   <Route path="/logs" element={<Logs />} />
                   <Route path="/menu-settings" element={<MenuSettings />} />
+                  <Route path="/cpool" element={<ConnectionPool />} />
+                  <Route path="/cache-management" element={<CacheManagement />} />
                 </>
               )}
               <Route path="/chat" element={<ChatList />} />

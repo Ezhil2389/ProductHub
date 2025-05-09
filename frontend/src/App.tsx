@@ -10,6 +10,7 @@ import { useTheme } from './contexts/ThemeContext';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { MenuProvider } from './contexts/MenuContext';
 import { chatService } from './services/chatService';
+import { ToastContainer } from 'react-toastify';
 
 const Toast: React.FC<{ message: string; onClose: () => void }> = ({ message, onClose }) => (
   <div className="fixed bottom-6 right-6 z-50 bg-indigo-700 text-white px-4 py-2 rounded shadow-lg animate-fade-in">
@@ -164,6 +165,15 @@ function AppContent() {
 function App() {
   return (
     <AuthProvider>
+      <ToastContainer 
+        position="top-right" 
+        autoClose={3000} 
+        hideProgressBar={false} 
+        closeOnClick 
+        pauseOnHover 
+        theme="colored" 
+        aria-label="Notifications"
+      />
       <AppContent />
     </AuthProvider>
   );

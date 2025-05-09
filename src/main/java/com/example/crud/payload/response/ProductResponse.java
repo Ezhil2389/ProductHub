@@ -16,4 +16,10 @@ public class ProductResponse {
     private String updatedBy;
     private LocalDateTime createdWhen;
     private LocalDateTime updatedWhen;
+    
+    @Override
+    public String toString() {
+        return String.format("Product[id=%d, name='%s', price=%.2f, qty=%d]", 
+                id, name, price != null ? price.doubleValue() : 0.0, quantity != null ? quantity : 0);
+    }
 }

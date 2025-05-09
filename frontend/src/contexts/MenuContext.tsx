@@ -104,6 +104,16 @@ const defaultMenuItems: MenuItem[] = [
     order: 6
   },
   {
+    id: 'cpool',
+    name: 'Connection Pool', 
+    path: '/dashboard/cpool', 
+    icon: Database, 
+    badge: '',
+    roles: ['ROLE_ADMIN', 'ADMIN'],
+    isVisible: true,
+    order: 7
+  },
+  {
     id: 'menu-settings',
     name: 'Menu Settings', 
     path: '/dashboard/menu-settings', 
@@ -111,7 +121,7 @@ const defaultMenuItems: MenuItem[] = [
     badge: '',
     roles: ['ROLE_ADMIN', 'ADMIN'],
     isVisible: true,
-    order: 7
+    order: 8
   }
 ];
 

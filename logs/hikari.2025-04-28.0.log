@@ -1,0 +1,456 @@
+2025-04-28 17:07:49.280 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.h2.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
+  context: api
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@60e53b93
+
+2025-04-28 17:07:50.125 [main] DEBUG com.zaxxer.hikari.HikariConfig - DevHikariPool - configuration:
+2025-04-28 17:07:50.128 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-04-28 17:07:50.128 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-04-28 17:07:50.129 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-04-28 17:07:50.129 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-04-28 17:07:50.138 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery............."SELECT 1"
+2025-04-28 17:07:50.138 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............20000
+2025-04-28 17:07:50.138 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-04-28 17:07:50.138 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-04-28 17:07:50.139 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-04-28 17:07:50.139 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-04-28 17:07:50.139 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.h2.Driver"
+2025-04-28 17:07:50.139 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-04-28 17:07:50.140 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-04-28 17:07:50.140 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-04-28 17:07:50.140 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................300000
+2025-04-28 17:07:50.140 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-04-28 17:07:50.140 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-04-28 17:07:50.140 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:h2:file:./data/cruddb-dev;DB_CLOSE_DELAY=-1
+2025-04-28 17:07:50.140 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-04-28 17:07:50.140 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-04-28 17:07:50.141 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1200000
+2025-04-28 17:07:50.141 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-04-28 17:07:50.141 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-04-28 17:07:50.141 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-04-28 17:07:50.141 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................3
+2025-04-28 17:07:50.141 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-04-28 17:07:50.141 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"DevHikariPool"
+2025-04-28 17:07:50.141 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-04-28 17:07:50.141 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-04-28 17:07:50.142 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-04-28 17:07:50.142 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-04-28 17:07:50.142 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-04-28 17:07:50.142 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-04-28 17:07:50.142 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"sa"
+2025-04-28 17:07:50.142 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-04-28 17:07:50.143 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Starting...
+2025-04-28 17:07:50.403 [main] INFO  com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:07:50.404 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Start completed.
+2025-04-28 17:07:50.511 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=1, active=0, idle=1, waiting=0)
+2025-04-28 17:07:50.512 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=1, active=0, idle=1, waiting=0)
+2025-04-28 17:07:50.516 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:07:50.544 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:07:50.557 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:07:57.095 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Shutdown initiated...
+2025-04-28 17:07:57.095 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before shutdown stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:07:57.098 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:07:57.098 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:07:57.098 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:07:57.098 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-04-28 17:07:57.098 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Shutdown completed.
+2025-04-28 17:08:58.004 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.h2.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
+  context: api
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@60e53b93
+
+2025-04-28 17:08:58.778 [main] DEBUG com.zaxxer.hikari.HikariConfig - DevHikariPool - configuration:
+2025-04-28 17:08:58.780 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-04-28 17:08:58.780 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-04-28 17:08:58.781 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-04-28 17:08:58.781 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-04-28 17:08:58.781 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery............."SELECT 1"
+2025-04-28 17:08:58.781 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............20000
+2025-04-28 17:08:58.781 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-04-28 17:08:58.781 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-04-28 17:08:58.781 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-04-28 17:08:58.782 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-04-28 17:08:58.782 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.h2.Driver"
+2025-04-28 17:08:58.783 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-04-28 17:08:58.783 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-04-28 17:08:58.783 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-04-28 17:08:58.783 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................300000
+2025-04-28 17:08:58.783 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-04-28 17:08:58.783 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-04-28 17:08:58.784 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:h2:file:./data/cruddb-dev;DB_CLOSE_DELAY=-1
+2025-04-28 17:08:58.784 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-04-28 17:08:58.784 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-04-28 17:08:58.784 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1200000
+2025-04-28 17:08:58.784 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-04-28 17:08:58.784 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-04-28 17:08:58.784 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-04-28 17:08:58.784 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................3
+2025-04-28 17:08:58.784 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-04-28 17:08:58.784 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"DevHikariPool"
+2025-04-28 17:08:58.785 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-04-28 17:08:58.785 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-04-28 17:08:58.785 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-04-28 17:08:58.785 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-04-28 17:08:58.785 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-04-28 17:08:58.785 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-04-28 17:08:58.786 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"sa"
+2025-04-28 17:08:58.786 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-04-28 17:08:58.786 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Starting...
+2025-04-28 17:08:59.061 [main] INFO  com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:08:59.062 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Start completed.
+2025-04-28 17:08:59.177 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=1, active=0, idle=1, waiting=0)
+2025-04-28 17:08:59.179 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=1, active=0, idle=1, waiting=0)
+2025-04-28 17:08:59.183 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:08:59.209 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:08:59.222 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:09:05.624 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Shutdown initiated...
+2025-04-28 17:09:05.624 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before shutdown stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:09:05.627 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:09:05.627 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:09:05.627 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:09:05.627 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-04-28 17:09:05.628 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Shutdown completed.
+2025-04-28 17:11:52.587 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44
+2025-04-28 17:11:53.932 [main] DEBUG com.zaxxer.hikari.HikariConfig - DevHikariPool - configuration:
+2025-04-28 17:11:53.938 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-04-28 17:11:53.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-04-28 17:11:53.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-04-28 17:11:53.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-04-28 17:11:53.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery............."SELECT 1"
+2025-04-28 17:11:53.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............20000
+2025-04-28 17:11:53.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-04-28 17:11:53.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-04-28 17:11:53.940 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-04-28 17:11:53.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-04-28 17:11:53.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.h2.Driver"
+2025-04-28 17:11:53.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-04-28 17:11:53.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-04-28 17:11:53.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-04-28 17:11:53.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................300000
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:h2:file:./data/cruddb-dev;DB_CLOSE_DELAY=-1
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1200000
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................3
+2025-04-28 17:11:53.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-04-28 17:11:53.944 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"DevHikariPool"
+2025-04-28 17:11:53.945 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-04-28 17:11:53.945 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................true
+2025-04-28 17:11:53.946 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-04-28 17:11:53.946 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-04-28 17:11:53.946 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-04-28 17:11:53.946 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-04-28 17:11:53.946 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"sa"
+2025-04-28 17:11:53.946 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-04-28 17:11:53.946 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Starting...
+2025-04-28 17:11:54.336 [main] INFO  com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:11:54.397 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Start completed.
+2025-04-28 17:11:54.506 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=1, active=0, idle=1, waiting=0)
+2025-04-28 17:11:54.508 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=1, active=0, idle=1, waiting=0)
+2025-04-28 17:11:54.511 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:11:54.523 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:11:54.537 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:12:02.921 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Shutdown initiated...
+2025-04-28 17:12:02.922 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before shutdown stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:12:02.926 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:12:02.927 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:12:02.927 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:12:02.927 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-04-28 17:12:02.927 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Shutdown completed.
+2025-04-28 17:12:20.250 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.h2.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
+  context: api
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@60e53b93
+
+2025-04-28 17:12:20.967 [main] DEBUG com.zaxxer.hikari.HikariConfig - DevHikariPool - configuration:
+2025-04-28 17:12:20.971 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-04-28 17:12:20.972 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-04-28 17:12:20.973 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-04-28 17:12:20.973 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-04-28 17:12:20.973 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery............."SELECT 1"
+2025-04-28 17:12:20.973 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............20000
+2025-04-28 17:12:20.974 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-04-28 17:12:20.974 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-04-28 17:12:20.974 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-04-28 17:12:20.975 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-04-28 17:12:20.975 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.h2.Driver"
+2025-04-28 17:12:20.975 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-04-28 17:12:20.975 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-04-28 17:12:20.975 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................300000
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:h2:file:./data/cruddb-dev;DB_CLOSE_DELAY=-1
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1200000
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................3
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-04-28 17:12:20.976 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"DevHikariPool"
+2025-04-28 17:12:20.977 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-04-28 17:12:20.977 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................true
+2025-04-28 17:12:20.977 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-04-28 17:12:20.977 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-04-28 17:12:20.977 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-04-28 17:12:20.977 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-04-28 17:12:20.977 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"sa"
+2025-04-28 17:12:20.977 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-04-28 17:12:20.977 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Starting...
+2025-04-28 17:12:21.251 [main] INFO  com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:12:21.289 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Start completed.
+2025-04-28 17:12:21.397 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=1, active=0, idle=1, waiting=0)
+2025-04-28 17:12:21.398 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=1, active=0, idle=1, waiting=0)
+2025-04-28 17:12:21.400 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:12:21.414 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:12:21.428 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:12:51.399 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:12:51.399 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:12:51.399 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:13:21.410 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:13:21.411 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:13:21.414 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn3: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:13:21.428 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn4: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:13:21.441 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:13:40.875 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:13:40.876 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:13:40.876 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:13:40.876 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn3: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:13:40.876 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn4: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:13:40.878 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn5: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:13:40.898 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn6: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:13:40.913 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn7: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:13:40.929 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn8: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:13:40.944 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn9: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:13:51.422 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:13:51.422 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:13:51.422 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:14:21.424 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:14:21.424 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:14:21.424 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:14:51.435 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:14:51.435 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:14:51.435 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:15:21.436 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:15:21.436 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:15:21.436 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:15:51.442 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:15:51.442 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:15:51.442 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:16:21.452 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:16:21.452 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:16:21.453 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:16:51.459 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:16:51.459 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:16:51.459 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:17:21.459 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:17:21.460 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:17:21.460 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:17:51.463 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:17:51.463 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:17:51.464 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:18:21.464 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:18:21.465 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:18:21.465 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:18:51.474 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:18:51.474 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:18:51.474 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:19:21.475 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:19:21.476 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:19:21.476 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:19:51.486 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:19:51.486 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:19:51.487 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:20:21.493 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:20:21.493 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:20:21.493 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:20:51.507 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:20:51.507 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:20:51.507 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:21:21.514 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:21:21.515 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:21:21.515 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:21:42.911 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Shutdown initiated...
+2025-04-28 17:21:42.912 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before shutdown stats (total=5, active=0, idle=5, waiting=0)
+2025-04-28 17:21:42.913 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn5: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:21:42.913 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn6: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:21:42.913 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn7: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:21:42.913 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn8: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:21:42.913 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn9: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection evicted)
+2025-04-28 17:21:42.913 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-04-28 17:21:42.914 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Shutdown completed.
+2025-04-28 17:21:51.365 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.h2.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
+  context: api
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@60e53b93
+
+2025-04-28 17:21:52.046 [main] DEBUG com.zaxxer.hikari.HikariConfig - DevHikariPool - configuration:
+2025-04-28 17:21:52.050 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-04-28 17:21:52.051 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-04-28 17:21:52.051 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-04-28 17:21:52.051 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-04-28 17:21:52.051 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery............."SELECT 1"
+2025-04-28 17:21:52.051 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............20000
+2025-04-28 17:21:52.051 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-04-28 17:21:52.051 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-04-28 17:21:52.051 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-04-28 17:21:52.052 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-04-28 17:21:52.052 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.h2.Driver"
+2025-04-28 17:21:52.052 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-04-28 17:21:52.052 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-04-28 17:21:52.052 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-04-28 17:21:52.053 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................300000
+2025-04-28 17:21:52.053 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-04-28 17:21:52.053 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-04-28 17:21:52.053 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:h2:file:./data/cruddb-dev;DB_CLOSE_DELAY=-1
+2025-04-28 17:21:52.053 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-04-28 17:21:52.054 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-04-28 17:21:52.054 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1200000
+2025-04-28 17:21:52.054 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-04-28 17:21:52.054 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-04-28 17:21:52.054 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-04-28 17:21:52.054 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................3
+2025-04-28 17:21:52.054 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-04-28 17:21:52.054 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"DevHikariPool"
+2025-04-28 17:21:52.054 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-04-28 17:21:52.055 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................true
+2025-04-28 17:21:52.055 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-04-28 17:21:52.055 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-04-28 17:21:52.055 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-04-28 17:21:52.055 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-04-28 17:21:52.055 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"sa"
+2025-04-28 17:21:52.055 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-04-28 17:21:52.055 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Starting...
+2025-04-28 17:21:52.324 [main] INFO  com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:21:52.374 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Start completed.
+2025-04-28 17:21:52.482 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=1, active=0, idle=1, waiting=0)
+2025-04-28 17:21:52.483 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=1, active=0, idle=1, waiting=0)
+2025-04-28 17:21:52.486 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:21:52.499 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:21:52.513 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:22:22.490 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:22:22.490 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:22:22.490 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:22:36.436 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn3: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:22:36.462 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn4: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:22:36.478 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn5: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:22:36.492 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn6: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:22:36.510 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn7: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:22:36.526 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn8: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:22:36.541 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn9: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:22:52.496 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=10, idle=0, waiting=11)
+2025-04-28 17:22:52.496 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=10, idle=0, waiting=11)
+2025-04-28 17:22:52.496 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:22:56.439 [Thread-15] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:22:56.439 [Thread-17] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:22:56.439 [Thread-14] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:22:56.439 [Thread-11] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:22:56.439 [Thread-13] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:22:56.439 [Thread-19] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:22:56.439 [Thread-6] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:22:56.439 [Thread-21] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=1)
+2025-04-28 17:22:56.439 [Thread-20] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:22:56.439 [Thread-8] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:22:57.139 [http-nio-8080-exec-5] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=0)
+2025-04-28 17:23:22.512 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:23:22.513 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:23:22.513 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:23:52.519 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:23:52.520 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:23:52.520 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:24:22.527 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:24:22.527 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:24:22.527 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:24:52.529 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:24:52.529 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:24:52.530 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:25:22.537 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:25:22.538 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:25:22.538 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:25:52.544 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:25:52.544 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:25:52.544 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:26:22.555 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:26:22.555 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:26:22.555 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:26:52.561 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:26:52.562 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:26:52.562 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:27:22.577 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:27:22.577 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:27:22.577 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:27:52.579 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:27:52.579 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:27:52.579 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:28:22.583 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:28:22.584 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:28:22.585 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:28:22.585 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn9: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed idleTimeout)
+2025-04-28 17:28:22.585 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn8: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed idleTimeout)
+2025-04-28 17:28:22.585 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn7: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed idleTimeout)
+2025-04-28 17:28:22.585 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn6: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed idleTimeout)
+2025-04-28 17:28:22.585 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn5: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed idleTimeout)
+2025-04-28 17:28:22.585 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn4: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed idleTimeout)
+2025-04-28 17:28:22.585 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn3: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed idleTimeout)
+2025-04-28 17:28:52.597 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:28:52.597 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:28:52.597 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:29:22.600 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:29:22.600 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:29:22.600 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:29:52.605 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:29:52.606 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:29:52.607 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:30:22.622 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:30:22.623 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:30:22.623 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:30:52.629 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:30:52.631 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:30:52.631 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:31:22.639 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:31:22.639 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:31:22.639 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:31:52.648 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:31:52.649 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-04-28 17:31:52.649 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:31:58.161 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn10: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:31:58.175 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn11: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:31:58.192 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn12: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:31:58.207 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn13: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:31:58.223 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn14: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:31:58.238 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn15: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:31:58.252 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn16: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-04-28 17:32:18.172 [Thread-39] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=6)
+2025-04-28 17:32:18.172 [Thread-32] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=4)
+2025-04-28 17:32:18.172 [Thread-41] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=6)
+2025-04-28 17:32:18.172 [http-nio-8080-exec-8] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=1)
+2025-04-28 17:32:18.172 [Thread-40] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:32:18.172 [Thread-37] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=9)
+2025-04-28 17:32:18.172 [Thread-35] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=4)
+2025-04-28 17:32:18.172 [Thread-36] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=2)
+2025-04-28 17:32:18.172 [Thread-33] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=0)
+2025-04-28 17:32:18.172 [Thread-29] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=9)
+2025-04-28 17:32:18.172 [Thread-38] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Timeout failure stats (total=10, active=10, idle=0, waiting=6)
+2025-04-28 17:32:22.659 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=10, idle=0, waiting=1)
+2025-04-28 17:32:22.659 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=10, idle=0, waiting=1)
+2025-04-28 17:32:22.659 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:32:52.673 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:32:52.673 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:32:52.674 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:33:22.684 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:33:22.684 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:33:22.684 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-04-28 17:33:52.700 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:33:52.700 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2025-04-28 17:33:52.701 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).

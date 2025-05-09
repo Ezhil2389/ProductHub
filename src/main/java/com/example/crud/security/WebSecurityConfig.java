@@ -25,6 +25,7 @@ import com.example.crud.security.jwt.AuthEntryPointJwt;
 import com.example.crud.security.jwt.AuthTokenFilter;
 import com.example.crud.security.UserStatusFilter;
 import com.example.crud.security.services.UserDetailsServiceImpl;
+import com.example.crud.security.ratelimit.RateLimitingFilter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,6 +50,9 @@ public class WebSecurityConfig {
 
     @Autowired
     private AuthTokenFilter authTokenFilter; // Inject the filter
+    
+    @Autowired
+    private RateLimitingFilter rateLimitingFilter; // Inject rate limiting filter
 
     // Keep the Authentication Provider and Manager beans as they are shared
     @Bean
@@ -120,6 +124,7 @@ public class WebSecurityConfig {
             .csrf(csrf -> csrf.disable()) // Disable CSRF generally
             .headers(headers -> headers.frameOptions(frameOption -> frameOption.sameOrigin())) // For H2 Console
             .authenticationProvider(authenticationProvider()) // Set auth provider
+            .addFilterBefore(rateLimitingFilter, UsernamePasswordAuthenticationFilter.class) // Add rate limiting filter
             .addFilterBefore(authTokenFilter, UsernamePasswordAuthenticationFilter.class) // Add JWT filter
             .addFilterAfter(userStatusFilter, AuthTokenFilter.class); // Add User status filter
 

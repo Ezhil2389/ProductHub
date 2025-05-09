@@ -8,6 +8,7 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -42,6 +43,7 @@ public class User {
     @Size(max = 120)
     private String password;
 
+    @ToString.Exclude  // Exclude roles from toString to prevent LazyInitializationException
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -54,6 +56,7 @@ public class User {
     
     private boolean mfaEnabled = false;
     
+    @ToString.Exclude  // Exclude collection from toString to prevent LazyInitializationException
     @ElementCollection
     @CollectionTable(name = "user_recovery_codes", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "recovery_code")
@@ -91,5 +94,17 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+    }
+    
+    /**
+     * Custom toString implementation to handle lazy-loaded collections safely
+     */
+    @Override
+    public String toString() {
+        return "User[id=" + id + 
+               ", username='" + username + "'" +
+               ", email='" + (email != null ? "REDACTED" : null) + "'" +
+               ", status=" + status +
+               ", mfaEnabled=" + mfaEnabled + "]";
     }
 }

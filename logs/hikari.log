@@ -1,0 +1,382 @@
+2025-05-08 09:18:56.264 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.h2.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
+  context: api
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@60e53b93
+
+2025-05-08 09:18:56.981 [main] DEBUG com.zaxxer.hikari.HikariConfig - DevHikariPool - configuration:
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery............."SELECT 1"
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............20000
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.h2.Driver"
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................300000
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:h2:file:./data/cruddb-dev;DB_CLOSE_DELAY=-1
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1200000
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................3
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"DevHikariPool"
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................true
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"sa"
+2025-05-08 09:18:56.989 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-05-08 09:18:56.989 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Starting...
+2025-05-08 09:18:57.294 [main] INFO  com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-05-08 09:18:57.351 [main] INFO  com.zaxxer.hikari.HikariDataSource - DevHikariPool - Start completed.
+2025-05-08 09:18:57.462 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=1, active=0, idle=1, waiting=0)
+2025-05-08 09:18:57.464 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=1, active=0, idle=1, waiting=0)
+2025-05-08 09:18:57.467 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-05-08 09:18:57.493 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-05-08 09:18:57.508 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:19:27.474 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:19:27.475 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:19:27.475 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:19:57.480 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:19:57.481 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:19:57.481 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:20:27.496 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:20:27.497 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:20:27.497 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:20:57.509 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:20:57.509 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:20:57.509 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:21:27.510 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:21:27.510 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:21:27.511 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:21:57.516 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:21:57.516 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:21:57.516 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:22:27.525 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:22:27.525 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:22:27.525 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:22:57.541 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:22:57.542 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:22:57.542 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:23:27.558 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:23:27.558 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:23:27.558 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:23:57.560 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:23:57.560 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:23:57.560 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:24:27.572 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:24:27.572 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:24:27.572 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:24:57.576 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:24:57.577 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:24:57.577 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:25:27.585 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:25:27.585 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:25:27.585 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:25:57.599 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:25:57.599 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:25:57.599 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:26:27.606 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:26:27.606 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:26:27.606 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:26:57.617 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:26:57.618 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:26:57.618 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:27:27.618 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:27:27.619 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:27:27.619 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:27:57.626 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:27:57.626 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:27:57.626 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:28:27.635 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:28:27.636 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:28:27.636 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:28:57.636 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:28:57.637 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:28:57.637 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:29:27.649 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:29:27.649 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:29:27.649 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:29:57.653 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:29:57.653 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:29:57.653 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:30:27.656 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:30:27.656 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:30:27.656 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:30:57.662 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:30:57.663 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:30:57.663 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:31:27.670 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:31:27.670 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:31:27.670 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:31:57.673 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:31:57.673 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:31:57.673 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:32:27.676 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:32:27.676 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:32:27.676 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:32:57.679 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:32:57.680 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:32:57.680 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:33:27.689 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:33:27.689 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:33:27.690 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:33:57.702 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:33:57.703 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:33:57.703 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:34:27.709 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:34:27.709 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:34:27.709 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:34:57.724 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:34:57.725 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:34:57.725 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:35:27.730 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:35:27.731 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:35:27.731 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:35:57.737 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:35:57.738 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:35:57.738 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:36:27.740 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:36:27.741 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:36:27.741 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:36:57.743 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:36:57.743 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:36:57.743 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:37:27.747 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:37:27.747 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:37:27.747 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:37:57.750 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:37:57.751 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:37:57.751 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:38:27.756 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:38:27.757 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:38:27.757 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:38:41.580 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn0: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed maxLifetime)
+2025-05-08 09:38:41.597 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn3: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-05-08 09:38:50.901 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn2: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed maxLifetime)
+2025-05-08 09:38:50.903 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn4: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-05-08 09:38:54.539 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn1: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed maxLifetime)
+2025-05-08 09:38:54.543 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn5: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-05-08 09:38:57.772 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:38:57.772 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:38:57.772 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:39:27.782 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:39:27.782 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:39:27.783 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:39:57.793 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:39:57.794 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:39:57.794 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:40:27.808 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:40:27.808 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:40:27.809 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:40:57.811 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:40:57.812 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:40:57.812 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:41:27.820 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:41:27.821 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:41:27.821 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:41:57.831 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:41:57.831 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:41:57.831 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:42:27.840 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:42:27.840 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:42:27.840 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:42:57.849 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:42:57.850 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:42:57.850 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:43:27.863 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:43:27.863 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:43:27.863 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:43:57.875 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:43:57.875 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:43:57.876 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:44:27.890 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:44:27.890 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:44:27.890 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:44:57.894 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:44:57.895 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:44:57.895 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:45:27.906 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:45:27.906 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:45:27.906 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:45:57.916 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:45:57.917 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:45:57.917 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:46:27.932 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:46:27.932 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:46:27.932 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:46:57.940 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:46:57.941 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:46:57.941 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:47:27.942 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:47:27.942 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:47:27.942 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:47:57.951 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:47:57.951 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:47:57.951 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:48:27.968 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:48:27.968 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:48:27.968 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:48:57.977 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:48:57.977 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:48:57.977 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:49:27.987 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:49:27.987 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:49:27.987 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:49:58.003 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:49:58.003 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:49:58.003 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:50:28.015 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:50:28.016 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:50:28.016 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:50:58.028 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:50:58.029 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:50:58.029 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:51:28.033 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:51:28.034 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:51:28.034 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:51:58.036 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:51:58.036 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:51:58.036 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:52:28.047 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:52:28.047 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:52:28.047 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:52:58.050 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:52:58.050 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:52:58.051 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:53:28.052 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:53:28.052 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:53:28.052 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:53:58.054 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:53:58.055 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:53:58.055 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:54:28.064 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:54:28.064 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:54:28.064 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:54:58.067 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:54:58.068 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:54:58.068 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:55:28.082 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:55:28.082 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:55:28.082 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:55:58.084 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:55:58.084 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:55:58.084 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:56:28.097 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:56:28.097 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:56:28.097 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:56:58.100 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:56:58.100 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:56:58.100 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:57:28.111 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:57:28.111 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:57:28.111 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:57:58.113 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:57:58.113 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:57:58.113 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:58:28.127 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:58:28.127 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:58:28.127 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:58:35.697 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn3: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed maxLifetime)
+2025-05-08 09:58:35.697 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn6: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-05-08 09:58:37.431 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn4: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed maxLifetime)
+2025-05-08 09:58:37.431 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn7: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-05-08 09:58:47.729 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn5: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed maxLifetime)
+2025-05-08 09:58:47.731 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn8: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-05-08 09:58:58.131 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:58:58.131 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:58:58.131 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:59:28.144 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:59:28.144 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:59:28.144 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 09:59:58.145 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:59:58.146 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 09:59:58.146 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:00:00.014 [DevHikariPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Added connection conn9: url=jdbc:h2:file:./data/cruddb-dev user=SA
+2025-05-08 10:00:28.160 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:00:28.161 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:00:28.161 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:00:58.162 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:00:58.162 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:00:58.162 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:01:28.177 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:01:28.177 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:01:28.177 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:01:58.191 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:01:58.192 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:01:58.192 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:02:28.207 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:02:28.207 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:02:28.207 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:02:58.208 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:02:58.208 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:02:58.208 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:03:28.211 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:03:28.211 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:03:28.211 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:03:58.211 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=4, active=0, idle=4, waiting=0)
+2025-05-08 10:03:58.211 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:03:58.211 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:03:58.211 [DevHikariPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - DevHikariPool - Closing connection conn8: url=jdbc:h2:file:./data/cruddb-dev user=SA: (connection has passed idleTimeout)
+2025-05-08 10:04:28.222 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:04:28.222 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:04:28.222 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:04:58.240 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:04:58.240 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:04:58.241 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:05:28.241 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:05:28.242 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:05:28.242 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:05:58.256 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:05:58.257 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:05:58.258 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:06:28.273 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:06:28.273 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:06:28.273 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:06:58.276 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:06:58.277 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:06:58.277 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:07:28.289 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:07:28.290 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:07:28.290 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:07:58.294 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:07:58.294 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:07:58.294 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:08:28.298 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:08:28.298 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:08:28.298 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:08:58.313 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:08:58.313 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:08:58.313 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:09:28.317 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:09:28.317 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:09:28.317 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:09:58.328 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:09:58.328 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:09:58.328 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:10:28.342 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:10:28.343 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:10:28.343 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:10:58.345 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:10:58.345 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:10:58.345 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:11:28.358 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:11:28.358 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:11:28.358 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+2025-05-08 10:11:58.363 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Before cleanup stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:11:58.364 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - After cleanup  stats (total=3, active=0, idle=3, waiting=0)
+2025-05-08 10:11:58.364 [DevHikariPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - DevHikariPool - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
