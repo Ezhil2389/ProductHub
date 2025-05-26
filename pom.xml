@@ -91,23 +91,6 @@
             <version>1.5.0</version>
         </dependency>
 
-        <!-- Google OAuth2 Client Dependencies -->
-        <dependency>
-            <groupId>com.google.api-client</groupId>
-            <artifactId>google-api-client</artifactId>
-            <version>2.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.oauth-client</groupId>
-            <artifactId>google-oauth-client</artifactId>
-            <version>1.34.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.http-client</groupId>
-            <artifactId>google-http-client-gson</artifactId>
-            <version>1.43.3</version>
-        </dependency>
-
         <!-- QueryDSL Dependencies -->
         <dependency>
             <groupId>com.querydsl</groupId>

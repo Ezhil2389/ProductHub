@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -39,6 +40,8 @@ public class WebSecurityConfig {
     @Value("${app.cors.allowed-origins}")
     private String allowedOrigins;
 
+    private final Environment environment;
+
     @Autowired
     UserDetailsServiceImpl userDetailsService;
 
@@ -53,6 +56,11 @@ public class WebSecurityConfig {
     
     @Autowired
     private RateLimitingFilter rateLimitingFilter; // Inject rate limiting filter
+
+    @Autowired
+    public WebSecurityConfig(Environment environment) {
+        this.environment = environment;
+    }
 
     // Keep the Authentication Provider and Manager beans as they are shared
     @Bean
@@ -110,20 +118,28 @@ public class WebSecurityConfig {
     @Bean
     @Order(1)
     SecurityFilterChain apiFilterChain(HttpSecurity http) throws Exception {
+        List<String> activeProfiles = Arrays.asList(environment.getActiveProfiles());
+
         http
             .securityMatcher(new AntPathRequestMatcher("/**")) // Apply to all other paths
             .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Apply CORS
             .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/auth/**", "/auth/google/**", "/h2-console/**").permitAll()
-                    // Note: No need for /ws/** permitAll here, handled by the other chain
-                    .requestMatchers("/api/logs/**").authenticated()
-                    .anyRequest().authenticated()
-            )
-            .csrf(csrf -> csrf.disable()) // Disable CSRF generally
-            .headers(headers -> headers.frameOptions(frameOption -> frameOption.sameOrigin())) // For H2 Console
-            .authenticationProvider(authenticationProvider()) // Set auth provider
+            .authorizeHttpRequests(auth -> {
+                auth.requestMatchers("/auth/**", "/auth/google/**", "/products/easter-egg").permitAll();
+                if (activeProfiles.contains("dev") || activeProfiles.contains("test")) {
+                    auth.requestMatchers("/h2-console/**").permitAll();
+                }
+                auth.requestMatchers("/api/logs/**").authenticated()
+                    .anyRequest().authenticated();
+            })
+            .csrf(csrf -> csrf.disable()); // Disable CSRF generally
+
+        if (activeProfiles.contains("dev") || activeProfiles.contains("test")) {
+            http.headers(headers -> headers.frameOptions(frameOption -> frameOption.sameOrigin())); // For H2 Console
+        }
+
+        http.authenticationProvider(authenticationProvider()) // Set auth provider
             .addFilterBefore(rateLimitingFilter, UsernamePasswordAuthenticationFilter.class) // Add rate limiting filter
             .addFilterBefore(authTokenFilter, UsernamePasswordAuthenticationFilter.class) // Add JWT filter
             .addFilterAfter(userStatusFilter, AuthTokenFilter.class); // Add User status filter

@@ -12,6 +12,8 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestParam;
+import java.util.Map;
 
 import com.example.crud.payload.request.ProductRequest;
 import com.example.crud.payload.response.MessageResponse;
@@ -133,5 +135,22 @@ public class ProductController {
         boolean isAdmin = userDetails.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"));
         ProductResponse response = productService.unlockProduct(id, userDetails.getUsername(), isAdmin);
         return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/easter-egg")
+    public ResponseEntity<Map<String, String>> getEasterEgg(
+            @RequestParam(name = "pentester_special_param", required = false) String specialParam) {
+        if (specialParam != null && Boolean.parseBoolean(specialParam)) {
+            Map<String, String> successResponse = Map.of(
+                "status", "Eureka!",
+                "message", "Congratulations, Mr./Ms. Pentester! You've found my little surprise! This one's on the house. The real challenge awaits! P.S. Remember to check product descriptions for 'features' ;)"
+            );
+            return ResponseEntity.ok(successResponse);
+        } else {
+            Map<String, String> notFoundResponse = Map.of(
+                "error", "Resource not found or parameter not activated"
+            );
+            return new ResponseEntity<>(notFoundResponse, HttpStatus.NOT_FOUND);
+        }
     }
 }

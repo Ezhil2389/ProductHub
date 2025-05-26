@@ -21,7 +21,8 @@ public class SignupRequest {
     private Set<String> roles;
 
     @NotBlank
-    @Size(min = 6, max = 40)
+    @Size(min = 8, max = 40)
+    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{8,40}$", message = "Password must be 8 to 40 characters long, include at least one uppercase letter, one lowercase letter, one digit, and one special character.")
     private String password;
 }
 

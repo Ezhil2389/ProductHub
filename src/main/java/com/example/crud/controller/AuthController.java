@@ -40,6 +40,8 @@ import com.example.crud.payload.request.MfaSetupRequest;
 import com.example.crud.payload.response.MfaSetupResponse;
 import com.example.crud.service.TokenBlacklistService;
 import com.example.crud.service.UserSessionService;
+import com.example.crud.service.LogService;
+import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/auth")
@@ -68,18 +70,42 @@ public class AuthController {
     @Autowired
     private UserSessionService userSessionService;
 
+    @Autowired
+    private LogService logService;
+
+    private String getClientIp(HttpServletRequest request) {
+        String[] headersToCheck = {
+                "X-Forwarded-For",
+                "Proxy-Client-IP",
+                "WL-Proxy-Client-IP",
+                "HTTP_X_FORWARDED_FOR",
+                "HTTP_CLIENT_IP",
+                "X-Real-IP"
+        };
+        for (String header : headersToCheck) {
+            String ip = request.getHeader(header);
+            if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
+                return ip.split(",")[0].trim();
+            }
+        }
+        return request.getRemoteAddr();
+    }
+
     @PostMapping("/signin")
-    public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+    public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest, HttpServletRequest request) {
         // Check if the account is expired before attempting authentication
         User userForExpiryCheck = userRepository.findByUsername(loginRequest.getUsername()).orElse(null);
         if (userForExpiryCheck != null && userForExpiryCheck.getAccountExpiresAt() != null &&
             userForExpiryCheck.getAccountExpiresAt().isBefore(java.time.LocalDateTime.now())) {
+            // Log account expired attempt? The spec doesn't explicitly state this, but it's a security event.
+            // For now, sticking to the spec.
             return ResponseEntity.badRequest()
                 .body(new MessageResponse("Account expired. Please contact an administrator."));
         }
         
         // Check if the account is locked before attempting authentication
         if (userService.isAccountLocked(loginRequest.getUsername())) {
+            logService.addLog("LOGIN_FAILURE", "USER_SESSION", loginRequest.getUsername(), "Failed login attempt: Account locked.", getClientIp(request));
             return ResponseEntity.badRequest()
                     .body(new MessageResponse("Account is locked due to too many failed login attempts. Please contact an administrator."));
         }
@@ -94,6 +120,7 @@ public class AuthController {
             // Check if MFA is enabled
             if (user.isMfaEnabled()) {
                 if (loginRequest.getMfaCode() == null) {
+                    logService.addLog("MFA_REQUIRED", "USER_SESSION", user.getUsername(), "MFA code required for login.", getClientIp(request));
                     return ResponseEntity.ok(new MessageResponse("MFA code required"));
                 }
                 
@@ -101,6 +128,7 @@ public class AuthController {
                 if (!mfaService.verifyCode(user.getMfaSecret(), loginRequest.getMfaCode())) {
                     // Check if it's a recovery code
                     if (!mfaService.validateRecoveryCode(user, String.valueOf(loginRequest.getMfaCode()))) {
+                        logService.addLog("MFA_VERIFICATION_FAILED", "USER_SESSION", user.getUsername(), "Invalid MFA code during login.", getClientIp(request));
                         return ResponseEntity.badRequest().body(new MessageResponse("Invalid MFA code"));
                     }
                 }
@@ -111,6 +139,7 @@ public class AuthController {
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
             String jwt = jwtUtils.generateJwtToken(authentication);
+            logService.addLog("LOGIN_SUCCESS", "USER_SESSION", userDetails.getUsername(), "User logged in successfully.", getClientIp(request));
 
             List<String> roles = userDetails.getAuthorities().stream()
                     .map(item -> item.getAuthority())
@@ -124,22 +153,25 @@ public class AuthController {
         } catch (BadCredentialsException e) {
             // Increment failed login attempts
             userService.incrementFailedLoginAttempts(loginRequest.getUsername());
+            logService.addLog("LOGIN_FAILURE", "USER_SESSION", loginRequest.getUsername(), "Failed login attempt: Invalid credentials.", getClientIp(request));
             
             // Check if the account is now locked after incrementing
             if (userService.isAccountLocked(loginRequest.getUsername())) {
+                logService.addLog("LOGIN_FAILURE", "USER_SESSION", loginRequest.getUsername(), "Failed login attempt: Account locked.", getClientIp(request));
                 return ResponseEntity.badRequest()
                         .body(new MessageResponse("Account has been locked due to too many failed login attempts. Please contact an administrator."));
             }
             
             return ResponseEntity.badRequest().body(new MessageResponse("Invalid username or password"));
-        } catch (LockedException e) {
+        } catch (LockedException e) { // This case might be redundant if the above check catches it first.
+            logService.addLog("LOGIN_FAILURE", "USER_SESSION", loginRequest.getUsername(), "Failed login attempt: Account locked.", getClientIp(request));
             return ResponseEntity.badRequest()
                     .body(new MessageResponse("Account is locked. Please contact an administrator."));
         }
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+    public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest, HttpServletRequest request) {
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
             return ResponseEntity
                     .badRequest()
@@ -160,13 +192,14 @@ public class AuthController {
         Set<Role> roles = userService.getRoleSet(signUpRequest.getRoles());
         user.setRoles(roles);
         userRepository.save(user);
+        logService.addLog("USER_REGISTERED", "USER", signUpRequest.getUsername(), "New user registered.", getClientIp(request));
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
 
     @PostMapping("/mfa/setup")
     @PreAuthorize("isAuthenticated()")
-    public ResponseEntity<?> setupMfa() {
+    public ResponseEntity<?> setupMfa(HttpServletRequest request) {
         try {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
@@ -181,6 +214,7 @@ public class AuthController {
             
             user.setMfaSecret(secretKey);
             userRepository.save(user);
+            logService.addLog("MFA_SETUP_INITIATED", "USER_SECURITY", userDetails.getUsername(), "MFA setup process initiated.", getClientIp(request));
 
             return ResponseEntity.ok(new MfaSetupResponse(secretKey, qrCodeUrl, null));
         } catch (Exception e) {
@@ -191,38 +225,42 @@ public class AuthController {
 
     @PostMapping("/mfa/verify")
     @PreAuthorize("isAuthenticated()")
-    public ResponseEntity<?> verifyAndEnableMfa(@Valid @RequestBody MfaSetupRequest request) {
+    public ResponseEntity<?> verifyAndEnableMfa(@Valid @RequestBody MfaSetupRequest mfaRequest, HttpServletRequest request) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = userRepository.findById(userDetails.getId()).orElseThrow();
 
         try {
-            mfaService.enableMfaForUser(user, request.getCode());
+            mfaService.enableMfaForUser(user, mfaRequest.getCode());
             // Reload user to get the recovery codes
             user = userRepository.findById(userDetails.getId()).orElseThrow();
+            logService.addLog("MFA_ENABLED", "USER_SECURITY", userDetails.getUsername(), "MFA enabled successfully.", getClientIp(request));
             return ResponseEntity.ok(new MfaSetupResponse(user.getMfaSecret(), null, user.getRecoveryCodes()));
         } catch (IllegalArgumentException e) {
+            logService.addLog("MFA_VERIFICATION_FAILED", "USER_SECURITY", userDetails.getUsername(), "MFA code verification failed during setup: " + e.getMessage(), getClientIp(request));
             return ResponseEntity.badRequest().body(new MessageResponse(e.getMessage()));
         }
     }
 
     @PostMapping("/mfa/disable")
     @PreAuthorize("isAuthenticated()")
-    public ResponseEntity<?> disableMfa(@Valid @RequestBody MfaSetupRequest request) {
+    public ResponseEntity<?> disableMfa(@Valid @RequestBody MfaSetupRequest mfaRequest, HttpServletRequest request) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = userRepository.findById(userDetails.getId()).orElseThrow();
 
         try {
-            mfaService.disableMfaForUser(user, request.getCode());
+            mfaService.disableMfaForUser(user, mfaRequest.getCode());
+            logService.addLog("MFA_DISABLED", "USER_SECURITY", userDetails.getUsername(), "MFA disabled successfully.", getClientIp(request));
             return ResponseEntity.ok(new MessageResponse("MFA disabled successfully"));
         } catch (IllegalArgumentException e) {
+            logService.addLog("MFA_VERIFICATION_FAILED", "USER_SECURITY", userDetails.getUsername(), "MFA code verification failed during disable: " + e.getMessage(), getClientIp(request));
             return ResponseEntity.badRequest().body(new MessageResponse(e.getMessage()));
         }
     }
 
     @PostMapping("/signout")
-    public ResponseEntity<?> logoutUser(@RequestHeader(HttpHeaders.AUTHORIZATION) String authHeader) {
+    public ResponseEntity<?> logoutUser(@RequestHeader(HttpHeaders.AUTHORIZATION) String authHeader, HttpServletRequest request) {
         try {
             String token = authHeader.substring(7); // Remove "Bearer "
             Date expiryDate = jwtUtils.getExpirationDateFromToken(token);
@@ -237,6 +275,7 @@ public class AuthController {
                 
                 // Blacklist the current token
                 tokenBlacklistService.blacklistToken(token, expiryDate);
+                logService.addLog("LOGOUT", "USER_SESSION", userDetails.getUsername(), "User logged out successfully.", getClientIp(request));
                 
                 return ResponseEntity.ok(new MessageResponse("Logged out successfully!"));
             } else {
@@ -249,9 +288,11 @@ public class AuthController {
     
     @PostMapping("/admin/unlock-account")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<?> unlockUserAccount(@RequestBody Long userId) {
+    public ResponseEntity<?> unlockUserAccount(@RequestBody Long userId, HttpServletRequest request) { // Added request for potential future logging
         try {
             userService.unlockUserAccount(userId);
+            // Consider logging this admin action with IP
+            // logService.addLog("ADMIN_UNLOCK", "USER_ACCOUNT", adminUsername, "Unlocked account for user ID: " + userId, getClientIp(request));
             return ResponseEntity.ok(new MessageResponse("Account unlocked successfully"));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(new MessageResponse("Error: " + e.getMessage()));

@@ -15,8 +15,8 @@ public class LogService {
     private LogRepository logRepository;
 
     @Transactional
-    public void addLog(String operationType, String entityType, String performedBy, String details) {
-        Log log = new Log(operationType, entityType, performedBy, details);
+    public void addLog(String operationType, String entityType, String performedBy, String details, String ipAddress) {
+        Log log = new Log(operationType, entityType, performedBy, details, ipAddress);
         logRepository.save(log);
 
         // Check if we exceed the maximum number of logs (150)
@@ -26,6 +26,11 @@ public class LogService {
             List<Log> logsToDelete = allLogs.subList(150, allLogs.size());
             logRepository.deleteAll(logsToDelete);
         }
+    }
+
+    // Overloaded method for backward compatibility
+    public void addLog(String operationType, String entityType, String performedBy, String details) {
+        addLog(operationType, entityType, performedBy, details, null);
     }
 
     public List<Log> getAllLogs() {

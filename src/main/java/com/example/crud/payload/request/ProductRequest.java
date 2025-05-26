@@ -7,11 +7,15 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
+import jakarta.validation.constraints.Size;
+
 @Data
 public class ProductRequest {
     @NotBlank
+    @Size(min = 3, max = 100)
     private String name;
 
+    @Size(max = 1000)
     private String description;
 
     @NotNull

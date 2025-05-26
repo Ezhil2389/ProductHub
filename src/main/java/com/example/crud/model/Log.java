@@ -25,15 +25,19 @@ public class Log {
     @Column
     private String details; // Additional details about the operation
 
+    @Column(name = "ip_address", nullable = true)
+    private String ipAddress;
+
     // Constructors
     public Log() {}
 
-    public Log(String operationType, String entityType, String performedBy, String details) {
+    public Log(String operationType, String entityType, String performedBy, String details, String ipAddress) {
         this.operationType = operationType;
         this.entityType = entityType;
         this.performedBy = performedBy;
         this.timestamp = LocalDateTime.now();
         this.details = details;
+        this.ipAddress = ipAddress;
     }
 
     // Getters and Setters
@@ -83,5 +87,13 @@ public class Log {
 
     public void setDetails(String details) {
         this.details = details;
+    }
+
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
     }
 } 

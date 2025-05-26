@@ -204,6 +204,9 @@ public class UserService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
         
         int attempts = user.getFailedLoginAttempts() == null ? 0 : user.getFailedLoginAttempts();
+        // Log the failed attempt before incrementing
+        logService.addLog("LOGIN_ATTEMPT_FAILED", "USER_SECURITY", username, "Failed login attempt for user. Attempt: " + (attempts + 1), null);
+        
         user.setFailedLoginAttempts(attempts + 1);
         user.setLastFailedLoginTime(LocalDateTime.now());
         
